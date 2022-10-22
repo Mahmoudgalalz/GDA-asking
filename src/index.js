@@ -2,14 +2,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const routes= require('../routes/routes')
-
+const cors=require('cors')
 
 
 const mongo = process.env.DATABASE_URL
 require('dotenv').config();
 
 app.use(express.json());
-
+app.use(cors({
+  origin:'*',
+  methods:['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 
 
 app.use('/api',routes)
@@ -26,7 +29,7 @@ database.once('connected', () => {
 
 
 app.get('/', (req, res) => {
-  res.send("Hello");
+    res.redirect('https://http.dog/204.jpg')
 });
 
 // starting the server
