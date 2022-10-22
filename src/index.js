@@ -9,7 +9,10 @@ const mongo = process.env.DATABASE_URL
 require('dotenv').config();
 
 app.use(express.json());
-
+app.use(cors({
+  origin:'*',
+  methods:['GET','POST']
+}))
 
 
 app.use('/api',routes)
