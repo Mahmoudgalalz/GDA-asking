@@ -9,10 +9,21 @@ const mongo = process.env.DATABASE_URL
 require('dotenv').config();
 
 app.use(express.json());
-app.use(cors({
-  origin:'*',
-  methods:['GET','POST']
-}))
+app.use(
+  cors({
+    origin: true,
+    optionsSuccessStatus: 200,
+    credentials: true,
+  })
+);
+app.options(
+  '*',
+  cors({
+    origin: true,
+    optionsSuccessStatus: 200,
+    credentials: true,
+  })
+);
 
 
 app.use('/api',routes)
@@ -36,5 +47,3 @@ app.get('/', (req, res) => {
 app.listen(3001, () => {
   console.log('listening on port 3001');
 });
-
-module.exports=app
