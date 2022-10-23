@@ -5,7 +5,7 @@ const routes= require('../routes/routes')
 const cors=require('cors')
 
 
-const mongo = process.env.DATABASE_URL
+const mongo = 'mongodb+srv://krokeen:krokeen@dynamiccv.fklb5.mongodb.net/GDA'
 require('dotenv').config();
 
 app.use(express.json());

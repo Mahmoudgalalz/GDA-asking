@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/9aa198c9-5eff-4f65-a31a-f71999b0a5ad/appservices/subscriptions/9aa198c9-5eff-4f65-a31a-f71999b0a5ad/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/gdaasking",
+    "appService.deploySubpath": "."
+}
