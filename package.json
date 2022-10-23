@@ -4,7 +4,7 @@
   "description": "Asking",
   "main": "index.js",
   "scripts": {
-    "start": "vercel dev",
+    "start": "node src",
     "deploy":"vercel deploy --prod"
   },
   "author": "",
