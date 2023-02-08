@@ -8,6 +8,7 @@ const cors=require('cors')
 const mongo = 'mongodb+srv://krokeen:krokeen@dynamiccv.fklb5.mongodb.net/GDA'
 require('dotenv').config();
 
+
 app.use(express.json());
 app.use(
   cors({
